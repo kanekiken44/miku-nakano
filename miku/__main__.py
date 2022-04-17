@@ -1,7 +1,7 @@
 #### file where bot starts
 from miku import miku, tele
 from pyrogram import idle
-from pmbot import *
+from miku.plugins.pmbot import *
 from vars import Config
 
 miku.start()
