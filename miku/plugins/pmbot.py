@@ -64,8 +64,8 @@ async def cb_data(miku, update):
         )  
 
 @miku.on_message(filters.private & filters.incoming & filters.command(["start"]))
-async def start(bot, update):
-    await update.reply_text(
+async def start(miku, message):
+    await miku.reply_text(
         text=START_TEXT.format(update.from_user.mention),
         reply_markup=START_BUTTON,
         disable_web_page_preview=True
