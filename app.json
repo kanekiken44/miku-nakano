@@ -1,0 +1,45 @@
+{
+    "name": "Miku",
+    "description": "Personal pmbot",
+    "logo": "",
+    "keywords": [
+        "telegram",
+        "pyrogram",
+        "pmbot"
+    ],
+    "repository": "https://github.com/kanekiken44/miku-nakano",
+    "success_url": "https://t.me/dazai_xxx",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Bot Token",
+            "required": "True"
+        },
+        "APP_ID": {
+            "description": "App id",
+            "required": "True"
+        },
+        "API_HASH": {
+            "description": "App hash",
+            "required": "True"
+        },
+        "OWNER_ID": {
+            "description": "Your id",
+            "required": "True"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
